@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+  <title>Tailwindcss from figma</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container flex justify-between align-center ">
+
+      <svg width="220" height="19" viewBox="0 0 220 19" class="header-logo" fill="none">
+        <use href="src/assets/images/sprite.svg#logo" />
+      </svg>
+
+      <div class="nav-block ">
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a href="#projects" class="navbar__link">Projects</a>
+            </li>
+            <li class="navbar__item"><a href="#about" class="navbar__link">About</a></li>
+            <li class="navbar__item"><a href="#news" class="navbar__link">News</a></li>
+            <li class="navbar__item"><a href="#team" class="navbar__link">Team</a></li>
+            <li class="navbar__item"><a href="#contact" class="navbar__link">Contact</a>
+            </li>
+          </ul>
+
+        </nav>
+        <button type="button" class="burger-menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            class="burger-menu__icon">
+            <use href="src/assets/images/sprite.svg#menu" />
+          </svg>
+        </button>
+        <button type="button" class="btn">Get template</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+
+        <div class="hero-description">
+          <span class="hero-description__pre-title">Wishbone+Partners</span>
+          <h1 class="hero-description__title">The home of beautiful architecture.</h1>
+          <p class="hero-description__text">
+            We are an architecture firm with a focus on beautiful but functional design.
+            At its heart, we believe design is about usability and accessibility — these
+            are the guiding principles for our work. Read more about our previous
+            projects, our process and our team below.
+          </p>
+          <div class="hero-description__link-wrapper">
+            <a href="#about" class="hero-description__link">Read more</a>
+          </div>
+        </div>
+
+        <div class="hero-img">
+          <img src="src/assets/images/hero-background.jpg" alt="Hero background image"
+            class="hero-img__element" />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Our Firm Section -->
+    <section id="our-firm">
+      <div class="container-firm">
+
+
+        <h2 class="firm-tittle">Our firm</h2>
+
+        <div class="firm-description">
+          <div class="flex flex-col gap-2.5">
+            <p class="firm-description__text">Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Suspendisse
+              varius
+              enim in eros elementum tristique. Duis cursus, mi quis viverra ornare,
+              eros
+              dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus
+              nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+              tristique posuere.</p>
+            <p class="firm-description__text">Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Suspendisse
+              varius
+              enim in eros elementum tristique. Duis cursus, mi quis viverra ornare,
+              eros
+              dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus
+              nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+              tristique posuere.</p>
+            <p class="firm-description__text">Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Suspendisse
+              varius
+              enim in eros elementum tristique. Duis cursus, mi quis viverra ornare,
+              eros
+              dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus
+              nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+              tristique posuere.</p>
+            <div class="firm-man">
+              <img src="src/assets/images/foto-Stephen.jpg" class="firm-man__img"
+                alt="Stephen Collier" />
+              <div class="firm-man__info">
+                <h4 class="firm-man__name">Stephen Collier</h4>
+                <span class="firm-man__position">Senior Partner</span>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Reeding House Showcase -->
+    <section id="project-reeding-house" class="reeding-house">
+      <div class="container flex justify-end">
+
+        <div class="house-description max-w-[300px]">
+          <h3 class="house-description__title">Reeding House</h3>
+          <p class="house-description__text">
+            Lorem ipsum dolor sit amet, dolor sit amet dolor sit amet.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section id="our-process" class="py-[100px] bg-white">
+      <div class="container mx-auto px-4 text-center">
+
+        <div class="mb-14">
+          <span
+            class="text-xs uppercase tracking-[0.2em] text-gray-400 font-medium block mb-3">
+            Our process
+          </span>
+          <h2 class="text-4xl font-normal text-gray-900 mb-4">How we do what we do.</h2>
+
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+          <div class="flex flex-col items-center">
+            <div class="process-image-box mb-6">
+              <svg width="130" height="130" viewBox="0 0 24 24" fill="none"
+                class="w-32 h-32">
+                <use href="src/assets/images/sprite.svg#icon-sketching" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-normal text-gray-800 mb-3">Sketching</h3>
+            <p class="text-gray-500 text-[15px] leading-relaxed max-w-sm px-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut tristique
+              libero. Nulla luctus sapien ac arcu tempor, vitae tempor leo iaculis.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="process-image-box mb-6">
+              <svg width="130" height="130" viewBox="0 0 24 24" fill="none"
+                class="w-32 h-32">
+                <use href="src/assets/images/sprite.svg#icon-finalizing" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-normal text-gray-800 mb-3">Finalizing</h3>
+            <p class="text-gray-500 text-[15px] leading-relaxed max-w-sm px-4">
+              Adipiscing elit. Nulla ut tristique libero. Nulla vitae tempor leo iaculis
+              luctus sapien ac arcu tempor, vitae.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="process-image-box mb-6">
+              <svg width="130" height="130" viewBox="0 0 24 24" fill="none"
+                class="w-32 h-32">
+                <use href="src/assets/images/sprite.svg#icon-building" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-normal text-gray-800 mb-3">Building</h3>
+            <p class="text-gray-500 text-[15px] leading-relaxed max-w-sm px-4">
+              Nulla ut tristique libero. Lorem ipsum ut tristique libero. Nulla luctus
+              sapien ac arcu tempor, vitae lorem ipsum dolor leo iaculis.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- The Marble Staircase Showcase -->
+    <section id="project-marble-staircase" class="marble-section">
+      <div class="container flex justify-end">
+
+        <div class="house-description max-w-[300px]">
+          <h3 class="house-description__title">The marble staircase</h3>
+          <p class="house-description__text">
+            Lorem ipsum dolor sit amet, dolor sit amet dolor sit amet.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Prior Clients Section -->
+    <section id="prior-clients" class="clients">
+      <div class="container">
+        <div class="clients__row">
+
+          <div class="clients__info">
+            <span class="clients__subtitle">Prior clients</span>
+            <h2 class="clients__title">Happy customers.</h2>
+            <p class="clients__text">
+              Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula.
+              Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut
+              faucibus orci
+              tincidunt.
+            </p>
+          </div>
+
+          <div class="clients__logos">
+            <div class="clients__logo-wrapper">
+              <svg class="clients__logo-svg" viewBox="0 0 140 40"
+                aria-label="Hill & Playes Logo">
+                <use href="src/assets/images/sprite.svg#hilplayes" />
+              </svg>
+            </div>
+            <div class="clients__logo-wrapper">
+              <svg class="clients__logo-svg" viewBox="0 0 140 60"
+                aria-label="Riksgränsen Logo">
+                <use href="src/assets/images/sprite.svg#piksgra" />
+              </svg>
+            </div>
+            <div class="clients__logo-wrapper">
+              <svg class="clients__logo-svg" viewBox="0 0 140 40"
+                aria-label="Studio Cai Logo">
+                <use href="src/assets/images/sprite.svg#studio" />
+              </svg>
+            </div>
+            <div class="clients__logo-wrapper">
+              <svg class="clients__logo-svg" viewBox="0 0 140 40"
+                aria-label="ChillIndustries Logo">
+                <use href="src/assets/images/sprite.svg#chillind" />
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- The Swirling Staircase Showcase -->
+    <section id="project-swirling-staircase" class="swirling">
+
+
+      <div class="container flex">
+
+        <div class="house-description max-w-[300px]">
+          <h3 class="house-description__title">The swirling staircase</h3>
+          <p class="house-description__text">
+            Lorem ipsum dolor sit amet, dolor sit amet dolor sit amet.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="main-footer__row">
+
+        <div class="main-footer__info">
+          <a href="#" class="main-footer__logo-link">
+            <svg viewBox="0 0 220 19" class="main-footer__logo-svg">
+              <use href="src/assets/images/sprite.svg#logo" />
+            </svg>
+          </a>
+          <p class="main-footer__text">
+            Powered by <a href="#" class="main-footer__link">Webflow</a>.<br />
+            All rights reserved Wishbone+Partners, Inc. <a href="#"
+              class="main-footer__link">Licensing</a>.
+          </p>
+        </div>
+
+        <div class="main-footer__socials">
+          <a href="#" class="main-footer__social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" class="main-footer__social-svg">
+              <use href="src/assets/images/sprite.svg#twitter" />
+            </svg>
+          </a>
+          <a href="#" class="main-footer__social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" class="main-footer__social-svg">
+              <use href="src/assets/images/sprite.svg#instagram" />
+            </svg>
+          </a>
+          <a href="#" class="main-footer__social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" class="main-footer__social-svg">
+              <use href="src/assets/images/sprite.svg#facebook" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script src="navbar-open.js"></script>
+</body>
+
+</html>

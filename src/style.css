@@ -1,0 +1,318 @@
+@import "tailwindcss";
+
+
+
+:root {
+  --color-nav: rgb(27, 26, 26);
+  --color-text: rgb(64, 62, 59);
+  --color-small-title: rgb(100, 92, 85);
+  --color-name: rgb(27, 26, 26);
+  --color-fon: rgb(247, 247, 247);
+  --color-white: rgb(255, 255, 255);
+  --color-background: rgb(206, 196, 188);
+}
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --color-nav: var(--color-nav);
+  --color-text-main: var(--color-text);
+  --color-small-title: var(--color-small-title);
+  --color-name: var(--color-name);
+  --color-fon: var(--color-fon);
+  --color-white: var(--color-white);
+  --color-bg-custom: var(--color-background);
+}
+
+.container {
+  @apply max-w-7xl px-10 mx-auto;
+  @apply max-lg:px-5 max-md:px-2.5;
+
+}
+
+body {
+  @apply font-poppins text-base font-normal tracking-normal leading-6;
+}
+
+/* header */
+header {
+
+  @apply bg-white relative;
+}
+
+.header-logo {
+  @apply my-[32px] mx-[36px] max-lg:my-4 max-lg:mx-4 h-auto;
+}
+
+.navbar__list {
+  @apply flex gap-8 items-center justify-center;
+}
+
+.navbar {
+  @apply flex items-center justify-center;
+  @apply max-lg:hidden;
+
+}
+
+
+.navbar.is-open {
+
+  @apply max-lg:flex max-lg:flex-col max-lg:absolute max-lg:top-full max-lg:left-0 max-lg:w-full max-lg:bg-white max-lg:shadow-lg max-lg:p-6 max-lg:z-50;
+}
+
+
+.navbar.is-open .navbar__list {
+  @apply max-lg:flex-col max-lg:gap-5;
+}
+
+.nav-block {
+  @apply flex items-center gap-4 lg:gap-8 py-4 lg:py-5;
+}
+
+.btn {
+  @apply bg-nav text-white w-full max-w-[155px] h-[46px] rounded-[14px] px-4 whitespace-nowrap;
+}
+
+.navbar__link {
+  @apply text-nav;
+}
+
+.burger-menu {
+  @apply hidden max-lg:flex items-center justify-center;
+}
+
+.burger-menu__icon {
+  @apply fill-nav cursor-pointer;
+}
+
+/* MAIN */
+/* hero section */
+
+.hero-section {
+  @apply w-full overflow-hidden bg-small-title;
+}
+
+.hero-container {
+  /* items-stretch заставит картинку быть одной высоты с текстом */
+  @apply mx-auto flex flex-col md:flex-row items-stretch;
+}
+
+.hero-description {
+  /* Жестко задаем 50% ширины на десктопе. 
+     Уменьшаем паддинги на мобильных (px-6), возвращаем (px-14) на больших экранах */
+  @apply flex flex-col justify-center w-full md:w-1/2;
+  @apply px-6 py-12 md:px-10 md:py-16 lg:px-14 lg:py-20;
+}
+
+.hero-description__pre-title {
+  color: var(--color-text);
+  @apply uppercase tracking-widest text-xs mb-6 font-medium;
+}
+
+.hero-description__title {
+  color: var(--color-name);
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6;
+}
+
+.hero-description__text {
+  color: var(--color-text);
+  @apply text-base leading-relaxed mb-8 max-w-lg;
+}
+
+.hero-description__link-wrapper {
+  @apply inline-block;
+}
+
+.hero-description__link {
+  color: var(--color-name);
+  @apply inline-block border-b border-current pb-1 text-sm font-medium;
+  @apply transition-opacity duration-200 hover:opacity-70;
+}
+
+.hero-img {
+  @apply w-full md:w-1/2 shrink-0 max-md:pb-[10px];
+  @apply xl:min-h-[720px];
+}
+
+.hero-img__element {
+  @apply w-full h-full object-cover;
+}
+
+/* firm section */
+.container-firm {
+  /* Меняем flex-row на flex-col по умолчанию (для мобильных), а с экрана md возвращаем в ряд */
+  @apply flex flex-col md:flex-row max-w-3xl justify-center mx-auto shrink-0 px-5 box-content;
+
+  /* Уменьшаем огромные паддинги на мобильных, чтобы секция не была гигантской */
+  @apply py-12 md:pt-24 md:pb-32;
+
+  /* КРИТИЧЕСКИЙ ФИКС: отменяем максимальную высоту на мобильных, чтобы текст не налезал на нижний блок */
+  @apply max-md:max-h-none md:max-h-[582px];
+
+  gap: clamp(20px, 8vw, 132px);
+}
+
+.firm-tittle {
+  /* Добавляем отступ снизу mb-6 на мобильных. Ограничение ширины min-w включаем только на десктопе (md) */
+  @apply text-text-main text-4xl leading-9 mb-6 md:mb-0 md:min-w-[150px];
+}
+
+.firm-description {
+  @apply flex flex-col;
+}
+
+.firm-description__text {
+  @apply text-text-main text-base leading-6;
+}
+
+.firm-man {
+  /* items-center выровняет аватарку и текст строго по центру друг друга */
+  @apply flex flex-row items-center gap-4 mt-4;
+}
+
+.firm-man__img {
+  /* shrink-0 защитит аватарку от сплющивания при сужении экрана */
+  @apply w-20 h-20 shrink-0 rounded-full object-cover;
+}
+
+.firm-man__info {
+  /* Отступы между именем и должностью внутри флекса */
+  @apply flex flex-col gap-0.5;
+}
+
+/* reeding house */
+
+
+.reeding-house {
+  @apply bg-[url(/src/assets/images/123.jpg)] min-h-[600px] bg-cover bg-center bg-no-repeat;
+}
+
+.house-description {
+  @apply flex flex-col h-full pr-5 pt-[266px] pb-[266px];
+}
+
+
+
+/*  */
+
+.process-image-box {
+
+  @apply w-[120px] h-[120px] bg-[#3e3c3a] rounded-full;
+  @apply flex items-center justify-center mb-6;
+
+  img {
+    @apply w-10 h-10 object-contain;
+  }
+}
+
+.process-title {
+  @apply text-xl font-normal text-gray-800 mb-3;
+}
+
+.process-text {
+
+  @apply text-sm text-gray-500 leading-relaxed max-w-[340px] mx-auto;
+}
+
+/*  */
+
+.marble-section {
+  @apply bg-[url(/src/assets/images/bacground-flat.jpg)] min-h-[600px] bg-cover bg-center bg-no-repeat;
+}
+
+/*  */
+.clients {
+  /* Ипользуем цвет --color-text-main из вашей темы для темного фона */
+  @apply bg-text-main py-[100px] w-full overflow-hidden;
+}
+
+.clients__row {
+  @apply flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-20;
+}
+
+.clients__info {
+  @apply flex flex-col w-full lg:w-1/2 text-left;
+}
+
+.clients__subtitle {
+  /* Используем --color-bg-custom для приглушенного светлого текста */
+  @apply text-xs uppercase tracking-[0.2em] text-bg-custom font-medium mb-3 block opacity-80;
+}
+
+.clients__title {
+  @apply text-4xl font-normal text-white leading-tight mb-6;
+}
+
+.clients__text {
+  /* Используем --color-bg-custom для основного текста описания */
+  @apply text-bg-custom text-base leading-relaxed max-w-lg opacity-90;
+}
+
+.clients__logos {
+  @apply grid grid-cols-2 gap-x-16 gap-y-12 w-full lg:w-1/2 items-center justify-items-center;
+}
+
+.clients__logo-wrapper {
+  @apply flex items-center justify-center w-full min-h-[60px];
+}
+
+.clients__logo-svg {
+  /* fill-white и text-white автоматически покрасят внутренности ваших SVG в белый цвет */
+  @apply max-h-12 max-w-[160px] w-full h-full block mx-auto fill-white text-white transition-opacity duration-200 hover:opacity-80;
+}
+
+/*  */
+.swirling {
+  @apply bg-[url(/src/assets/images/backround-line.jpg)] min-h-[600px] bg-cover bg-center bg-no-repeat;
+}
+
+
+/*  */
+/* footer section */
+.main-footer {
+  /* Белый фон, верхняя тонкая рамка цвета --color-fon и аккуратные отступы */
+  @apply bg-white border-t border-fon py-16 w-full;
+}
+
+.main-footer__row {
+  /* Встает в колонку на мобилках и в красивую строку на экранах от md */
+  @apply flex flex-col md:flex-row justify-between items-start md:items-center gap-8;
+}
+
+.main-footer__info {
+  @apply flex flex-col gap-5;
+}
+
+.main-footer__logo-svg {
+  /* Цвет логотипа берем из вашей переменной --color-nav */
+  @apply fill-nav text-nav w-[220px] h-[19px] block;
+}
+
+.main-footer__text {
+  /* Основной текст берет --color-text-main */
+  @apply text-text-main text-sm font-light leading-relaxed;
+}
+
+.main-footer__link {
+  /* Навигационный темный цвет для ссылок с легким подчеркиванием при ховере */
+  @apply text-nav font-normal border-b border-transparent hover:border-current transition-all duration-200;
+}
+
+.main-footer__socials {
+  @apply flex gap-6 items-center;
+}
+
+.main-footer__social-link {
+  /* Иконки красятся в цвет навигации и мягко затухают при наведении */
+  @apply text-nav fill-nav transition-opacity duration-200 hover:opacity-60;
+}
+
+.main-footer__social-svg {
+  @apply w-5 h-5 block;
+}
+
+@media (min-width: 768px) {
+  .hero-img {
+    margin-right: calc((100vw - 100%) / -2);
+    width: calc(50% + (100vw - 100%) / 2);
+  }
+}
