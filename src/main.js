@@ -1,2 +1,2 @@
 import './style.css';
-import '../navbar-open.js';
+import './navbar-open.js';
